@@ -1,8 +1,11 @@
 
 # Title
-d
+Node.JS README generator
+# License
+[![badge:MIT](https://img.shields.io/badge/license-MIT-brightgreen)](https://opensource.org/licenses/MIT)
+This application is covered by the MIT license. 
 # Description
-d   
+This is a node based peice of code that allows a user to create a quick, professional README for a given project.  Simple additions can be added to this code to allow for more indepth content for a project.   
 ## Table of Contents 
 1. [Title](#Title)
 2. [Descrition](#Description)
@@ -15,24 +18,19 @@ d
 # Installation
 npm i   
 # Usage
-d   
-# License
-[![badge:undefined](https://img.shields.io/badge/license-undefined-brightgreen)](https://opensource.org/licenses/undefined)
-This application is covered by the MIT license. 
-# Badges
-undefined    
+A simple knowledge of node.js use running from the file in a terminal will allow a content creaotr to generate a readme.     
 # Contributors
-d  
+There were no direct contributors to this project.  
 # Tests
 npm run tests  
 # Questions
 * Feel free to reach out to me with any additional questions.
 ## GitHub username: 
-d 
+spaulsen-creator 
 ## Email Adress:
-d
+spaulsen68@yahoo.com
 ## Code:
 https://github.com/spaulsen-creator/09-Node.js-README-generator
-![Changed HTML](assets/Screenshot README.png)
+![Changed HTML](./assets/ScreenshotREADME.png)
 ## Walkthrough:
-![Demo of README](assets/README.md generator.gif)
+![Demo of README](./assets/README.mdgenerator.gif)

@@ -69,6 +69,9 @@ inquirer
 `
 # Title
 ${response.title}
+# License
+[![badge:${response.license}](https://img.shields.io/badge/license-${response.license}-brightgreen)](https://opensource.org/licenses/${response.license})
+This application is covered by the ${response.license} license. 
 # Description
 ${response.description}   
 ## Table of Contents 
@@ -83,12 +86,7 @@ ${response.description}
 # Installation
 ${response.install}   
 # Usage
-${response.usage}   
-# License
-[![badge:${response.License}](https://img.shields.io/badge/license-${response.License}-brightgreen)](https://opensource.org/licenses/${response.License})
-This application is covered by the ${response.license} license. 
-# Badges
-${response.badges}    
+${response.usage}     
 # Contributors
 ${response.contributors}  
 # Tests
@@ -101,9 +99,9 @@ ${response.questions}
 ${response.questions2}
 ## Code:
 https://github.com/spaulsen-creator/09-Node.js-README-generator
-![Changed HTML](./assets/Screenshot README.png)
+![Changed HTML](./assets/ScreenshotREADME.png)
 ## Walkthrough:
-![Demo of README](./assets/README.md generator.gif)
+![Demo of README](./assets/README.mdgenerator.gif)
 `, (err) =>
         err ? console.log(err) : console.log('README created successfully!'))
 
