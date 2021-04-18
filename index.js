@@ -1,37 +1,31 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
-const util = require('./util/generateMarkdown');
-
-
-
-
-// const inquirer = require('inquirer');
-// const fs = require('fs');
-// const util = require('./util/generateMarkdown');
+const util = require('./utils/generateMarkdown');
 
 // create writeFile function using promises instead of a callback function
-//const writeFileAsync = util.promisify(fs.writeFile);
+// const writeFileAsync = util.promisify(fs.writeFile);
 
 inquirer
-    .prompt([{
-
+    .prompt([
+        {
+            type: 'input',
             name: 'title',
             message: 'What is the project title?',
         },
         {
-
+            type: 'input',
             name: 'description',
             message: 'Please provide a description of the project.',
         },
         {
-
+            type: 'input',
             name: 'install',
             message: 'What command should be used for installation?',
             default: 'npm i',
         },
         {
-
+            type: 'input',
             name: 'usage',
             message: 'What does the user need to know about using this program?',
         },
@@ -54,31 +48,39 @@ inquirer
         },
         {
 
-
+            type: 'input',
+            name: 'tests',
             message: 'What command should be used to run a test?',
             default: 'npm run tests'
         },
         {
-
+            type: 'input',
             name: 'questions',
             message: 'What is your GitHub username?',
 
         },
         {
-
+            type: 'input',
             name: 'questions2',
             message: 'What is your email address?'
         },
     ])
 
-    .then(function (response) {
+.then(function (response) {
+    fs.writeFile(path.join(process.cwd(), 'sampleREADME.md'),
 
 
-        fs.writeFile(path.join(process.cwd(), 'sampleREADME.md'),
 
-` # Title
+        // const generateReadMe = (answers) =>
+        // // .then(function (response) {
+
+
+        // //     fs.writeFile(path.join(process.cwd(), 'sampleREADME.md'),
+
+`
+# Title
 ${response.title}
-## Description
+# Description
 ${response.description}   
 ## Table of Contents 
 1. [Title](#Title)
@@ -89,37 +91,44 @@ ${response.description}
 6. [Contributors](#Contributors)
 7. [Test](#Tests)
 8. [Questions](#Questions)  
-## Installation
+# Installation
 ${response.install}   
-## Usage
+# Usage
 ${response.usage}   
-## License
+# License
 [![badge:${response.License}](https://img.shields.io/badge/license-${response.License}-brightgreen)](https://opensource.org/licenses/${response.License})
-${response.license}
-## Badges
+This application is covered by the ${response.license} license. 
+# Badges
 ${response.badges}    
-## Contributors
+# Contributors
 ${response.contributors}  
-## Tests
+# Tests
 ${response.tests}  
-## Questions
+# Questions
 * Feel free to reach out to me with any additional questions.
+## GitHub username: 
 ${response.questions} 
+## Email Adress:
 ${response.questions2}
+## Code:
+https://github.com/spaulsen-creator/09-Node.js-README-generator
+![Changed HTML](./assets/images/ScreenshorGenerator.png)
+## Walkthrough:
+![Demo of README](./assets/images/README.gif)
 `, (err) =>
-err ? consolelog(err) : consolelog('README created successfully!'))
+        err ? console.log(err) : console.log('README created successfully!'))
 
 })
 
 function init() {
 
 }
-
+// Bonus using writeFileAsync as a promise
 // const init = () => {
-//     promptUser()
-//         .then((response) => writeFileAsync('README.md', generateReadMe(response)))
-//         .then(() => console.log('Successfully wrote to README.md'))
-//         .catch((err) => console.error(err));
+//   promptUser()
+//     .then((answers) => writeFileAsync('index.html', generateHTML(answers)))
+//     .then(() => console.log('Successfully wrote to index.html'))
+//     .catch((err) => console.error(err));
 // };
 
 init();
