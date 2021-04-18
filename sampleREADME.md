@@ -1,8 +1,8 @@
 
 # Title
-dfs
+d
 # Description
-fdsa   
+d   
 ## Table of Contents 
 1. [Title](#Title)
 2. [Descrition](#Description)
@@ -13,26 +13,26 @@ fdsa
 7. [Test](#Tests)
 8. [Questions](#Questions)  
 # Installation
-adsf   
+npm i   
 # Usage
-a   
+d   
 # License
 [![badge:undefined](https://img.shields.io/badge/license-undefined-brightgreen)](https://opensource.org/licenses/undefined)
 This application is covered by the MIT license. 
 # Badges
 undefined    
 # Contributors
-DFA  
+d  
 # Tests
 npm run tests  
 # Questions
 * Feel free to reach out to me with any additional questions.
 ## GitHub username: 
-DAF 
+d 
 ## Email Adress:
-ADF
+d
 ## Code:
 https://github.com/spaulsen-creator/09-Node.js-README-generator
-![Changed HTML](./assets/images/ScreenshorGenerator.png)
+![Changed HTML](assets/Screenshot README.png)
 ## Walkthrough:
-![Demo of README](./assets/images/README.gif)
+![Demo of README](assets/README.md generator.gif)

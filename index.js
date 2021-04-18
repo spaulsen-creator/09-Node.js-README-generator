@@ -3,9 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const util = require('./utils/generateMarkdown');
 
-// create writeFile function using promises instead of a callback function
-// const writeFileAsync = util.promisify(fs.writeFile);
-
 inquirer
     .prompt([
         {
@@ -69,14 +66,6 @@ inquirer
 .then(function (response) {
     fs.writeFile(path.join(process.cwd(), 'sampleREADME.md'),
 
-
-
-        // const generateReadMe = (answers) =>
-        // // .then(function (response) {
-
-
-        // //     fs.writeFile(path.join(process.cwd(), 'sampleREADME.md'),
-
 `
 # Title
 ${response.title}
@@ -112,9 +101,9 @@ ${response.questions}
 ${response.questions2}
 ## Code:
 https://github.com/spaulsen-creator/09-Node.js-README-generator
-![Changed HTML](./assets/images/ScreenshorGenerator.png)
+![Changed HTML](./assets/Screenshot README.png)
 ## Walkthrough:
-![Demo of README](./assets/images/README.gif)
+![Demo of README](./assets/README.md generator.gif)
 `, (err) =>
         err ? console.log(err) : console.log('README created successfully!'))
 
@@ -123,12 +112,5 @@ https://github.com/spaulsen-creator/09-Node.js-README-generator
 function init() {
 
 }
-// Bonus using writeFileAsync as a promise
-// const init = () => {
-//   promptUser()
-//     .then((answers) => writeFileAsync('index.html', generateHTML(answers)))
-//     .then(() => console.log('Successfully wrote to index.html'))
-//     .catch((err) => console.error(err));
-// };
 
 init();
